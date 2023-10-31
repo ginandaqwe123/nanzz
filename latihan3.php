@@ -105,15 +105,21 @@
       $ketm = "Tidak Lulus";
     }
 
-    $rata_rata = ($nilai_A + $nilai_P + $nilai_M) / 3;
+    $rata_rata = ($nilai_A + $nilai_P + $nilai_M) / 3; 
 
   ?>
 
+  <div class="container">
+    <br><br>
+    <h3>Nama : <?php echo $nama?></h3>
+    <h3>Kelas : <?php echo $kelas?></h3>
+    <br><br>
 <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">no</th>
       <th scope="col">mapel</th>
+      <th scope="col">nilai</th>
       <th scope="col">grade</th>
       <th scope="col">keterangan</th>
     </tr>
@@ -140,6 +146,11 @@
       <td> <?php echo $gradem ?> </td>
       <td> <?php echo $ketm ?> </td>
     </tr>
+    <tr>
+    <td colspan="4">Nilai Rata-Rata</td>
+    <td><?= $rata_rata ?></td>
+</tr>
+
   </tbody>
 </table>
   </div>
